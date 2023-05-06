@@ -1,9 +1,9 @@
 {
-  "name": "youtube2023",
+  "name": "CheThanhKienB1910088",
   "version": "1.0.0",
   "main": "server.js",
   "type": "module",
-  "author": "hafizjavaid <hafizjaidi786@gmail.com>",
+  "author": "CheThanhKienB1910088",
   "license": "MIT",
   "scripts": {
     "start": "nodemon server"

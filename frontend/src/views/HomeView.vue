@@ -15,7 +15,7 @@
       <textarea
         rows="1"
         cols="1"
-        placeholder="Ask VueChat..."
+        placeholder="Hỏi gì hỏi đi??"
         v-model="question"
       ></textarea>
       <button type="submit"><img src="@/assets/send.svg" alt="send" /></button>
@@ -43,13 +43,11 @@ const fetchAnswer = async () => {
     const res = await fetch("http://localhost:8000", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json;charset=utf-8",
+        
       },
-      body: JSON.stringify({
-        question: question.value,
-      }),
+      body: JSON.stringify({ question: question.value }),
     });
-    // console.log(res);
     const data = await res.json();
     console.log(data);
     const parsedData = data.bot.trim();
